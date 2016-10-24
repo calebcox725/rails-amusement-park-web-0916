@@ -1,0 +1,11 @@
+<% if @user.admin %>
+ADMIN
+<% end %>
+Name: <%= @user.name %>
+Tickets: <%= @user.tickets %>
+Mood: <%= @user.mood %>
+Height: <%= @user.height %>
+
+<%= link_to "See attractions", attractions_path %>
+
+<%= button_to "Log Out", session_path, method: "delete" %>

@@ -19,11 +19,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
+        <a class="navbar-brand" href="<%= root_url %>">Home</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-           <!--  nav here -->
+            <a class="navbar-brand" href="<%= new_user_path %>">Sign up</a>
+            <a class="navbar-brand" href="<%= signin_path %>">Sign in</a>
+            <a class="navbar-brand" href="<%= signout_path %>">Log Out</a>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
