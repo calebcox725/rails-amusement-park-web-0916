@@ -6,7 +6,7 @@ class Ride < ActiveRecord::Base
     if user.height < attraction.min_height || user.tickets < attraction.tickets
       sorry_arr = ["Sorry."]
       if user.tickets < attraction.tickets
-        sorry_arr << "You do not have enough tickets the #{attraction.name}."
+        sorry_arr << "You do not have enough tickets to ride the #{attraction.name}."
       end
       if user.height < attraction.min_height
         sorry_arr <<"You are not tall enough to ride the #{attraction.name}."
@@ -17,6 +17,7 @@ class Ride < ActiveRecord::Base
       user.nausea += attraction.nausea_rating
       user.happiness += attraction.happiness_rating
       user.save
+      "Thanks for riding the #{attraction.name}!"
     end
   end
 end
